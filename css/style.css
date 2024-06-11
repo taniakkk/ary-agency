@@ -1,0 +1,378 @@
+@import url("reset.css");
+
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:regular&display=swap");
+@import url("https://fonts.googleapis.com/css?family=DM+Mono:regular&display=swap");
+@import url("https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro?styles=82967");
+@import url("https://fonts.cdnfonts.com/css/helvetica-255?styles=15805");
+
+/* font-family: 'Neue Haas Grotesk Display Pro', sans-serif;*/
+/* font-family: 'Helvetica', sans-serif; */
+
+/* ------------------ */
+@import url("header.css");
+/* ------------------ */
+@import url("footer.css");
+/* ------------------ */
+@import url("works.css");
+/* ------------------ */
+@import url("about.css");
+/* ------------------ */
+@import url("service.css");
+/* ------------------ */
+/* ------------------ */
+@import url("partners.css");
+
+/* ------------------ */
+*::selection {
+   color: #ff6c37;
+   background-color: #000;
+}
+::-webkit-scrollbar {
+   width: 0.75rem;
+   /* border-radius: 0 1rem 1rem 0; */
+   background-color: #484848;
+}
+
+::-webkit-scrollbar-thumb {
+   background-color: #ff6c37;
+   border: 0.0625rem solid #484848;
+   border-radius: 1.25rem;
+}
+
+/* Add the scrollbar style for Firefox */
+scrollbar {
+   -moz-appearance: none;
+   width: 0.75rem;
+   background-color: #484848;
+}
+
+scrollbar-thumb {
+   background-color: #ff6c37;
+   border: 0.0625rem solid #484848;
+   border-radius: 1.25rem;
+}
+
+/* Add the scrollbar style for IE and Edge */
+scrollbar-base,
+scrollbar-track,
+scrollbar-thumb,
+scrollbar-corner {
+   -ms-overflow-style: none;
+   background-color: transparent;
+}
+
+scrollbar-thumb {
+   background-color: #ff6c37;
+   border: 0.0625rem solid #484848;
+   border-radius: 1.25rem;
+}
+/* ------------------ */
+.wrapper {
+   min-height: 100%;
+   overflow: clip;
+
+   display: flex;
+   flex-direction: column;
+}
+[class*="__container"] {
+   /* padding: 0px 15px; */
+   padding: 0px 40px;
+}
+@media (max-width: 47.9988rem) {
+   [class*="__container"] {
+      padding: 0px 20px;
+   }
+}
+
+body {
+   background-color: #f5f5f5;
+   color: #000;
+   font-family: "DM Sans", sans-serif;
+   font-size: 14px;
+}
+/* ------------------ */
+.page {
+   flex: 1 1 auto;
+}
+.page__works {
+}
+.page__about {
+}
+.page__service {
+}
+/* ------------------ */
+.link {
+   font-size: 1.5rem;
+   line-height: 129.166667%; /* 31/24 */
+   text-transform: uppercase;
+   position: relative;
+   user-select: none;
+   -webkit-tap-highlight-color: transparent;
+   transition: color 0.3s linear;
+}
+/* .link::after {
+   content: "";
+   position: absolute;
+   width: 0;
+   height: 0.1875rem;
+   left: 50%;
+   bottom: 0;
+   background-color: #ff6c37;
+   transition: all 0.3s;
+} */
+@media (any-hover: hover) {
+   /* .link:hover::after {
+      width: 100%;
+      left: 0;
+   } */
+   .link:hover {
+      color: #ff6c37;
+   }
+}
+@media (any-hover: none) {
+   /* .link:active::after {
+      transition-duration: 0s;
+      width: 100%;
+      left: 0;
+   } */
+   .link:active {
+      transition-duration: 0s;
+      color: #ff6c37;
+   }
+}
+@media (max-width: 47.9988rem) {
+   .link {
+      font-size: 1.25rem;
+   }
+}
+/* ------------------ */
+.label {
+   line-height: 128.571429%; /* 18/14 */
+   text-transform: uppercase;
+}
+/* ------------------ */
+.page__get {
+}
+.get {
+   padding-top: 14.375rem;
+   padding-bottom: 13.75rem;
+}
+.get__items {
+   display: grid;
+}
+@media (max-width: 61.9988rem) {
+   .get__items {
+      gap: 1.25rem;
+   }
+}
+@media (max-width: 29.9988rem) {
+   .get__items {
+      gap: 0.9375rem;
+   }
+}
+.get__item {
+}
+.item-get {
+   background: #ff6c37;
+   width: 105%;
+   height: 5.8125rem;
+   position: relative;
+}
+@media (min-width: 61.9988rem) {
+   .item-get {
+      left: -1%;
+   }
+   .item-get--first {
+      transform-origin: bottom left;
+      transform: rotate(-4.98deg);
+   }
+   .item-get--second {
+      transform: rotate(3.71deg);
+      /* transform-origin: top left; */
+   }
+}
+@media (min-width: 2500px) {
+   .item-get {
+      transform-origin: center center;
+   }
+   .item-get--second {
+      translate: 0 -100%;
+   }
+}
+@media (min-width: 2000px) {
+   .item-get--first {
+      transform: rotate(-3.71deg);
+   }
+}
+.item-get__body {
+   position: relative;
+   height: 100%;
+   width: 600%;
+}
+@media (min-width: 103.125rem) {
+   .item-get__body {
+      width: 430%;
+   }
+}
+@media (min-width: 3500px) {
+   .item-get__body {
+      width: 210%;
+   }
+}
+.item-get--first .item-get__body {
+   animation: item-get-first 20s linear infinite;
+}
+.item-get--second .item-get__body {
+   animation: item-get-second 20s linear infinite;
+}
+@keyframes item-get-first {
+   0% {
+      transform: translateX(0);
+   }
+   100% {
+      transform: translateX(50%);
+   }
+}
+@keyframes item-get-second {
+   0% {
+      transform: translateX(0);
+   }
+   100% {
+      transform: translateX(-50%);
+   }
+}
+.item-get__row {
+   position: absolute;
+   top: 50%;
+   width: 50%;
+   height: 100%;
+   /* gap: 3.75rem; */
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   transform: translateY(-50%);
+   /* padding: 0.9375rem 0; */
+}
+.item-get--first .item-get__row:nth-child(1) {
+   left: 0;
+}
+.item-get--first .item-get__row:nth-child(2) {
+   left: -50%;
+}
+.item-get--second .item-get__row:nth-child(1) {
+   left: 50%;
+}
+.item-get--second .item-get__row:nth-child(2) {
+   left: 0;
+}
+.item-get__content {
+   background: #ff6c37;
+   display: flex;
+   align-items: center;
+   gap: 0.25rem;
+   position: relative;
+   /* left: -120px; */
+}
+@media (any-hover: hover) {
+   .item-get:hover .item-get__body {
+      animation-play-state: paused;
+   }
+}
+@media (any-hover: none) {
+   .item-get:active .item-get__body {
+      animation-play-state: paused;
+   }
+}
+.item-get__text {
+   color: #000;
+   font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+   font-size: 4.3125rem;
+   letter-spacing: 0.02em;
+   line-height: 120.289855%; /* 83/69 */
+   text-wrap: nowrap;
+}
+.item-get__arrow {
+   flex: 0 0 3.75rem;
+   height: 3.75rem;
+   transform: rotate(-46deg);
+}
+.item-get__arrow img {
+   width: 100%;
+   height: 100%;
+}
+@media (max-width: 75rem) {
+   .get {
+      padding-top: 10.625rem;
+      padding-bottom: 10.3125rem;
+   }
+   .item-get__text {
+      font-size: 3.75rem;
+   }
+   .item-get__arrow {
+      flex: 0 0 3.125rem;
+      height: 3.125rem;
+   }
+   .item-get {
+      height: 4.6875rem;
+   }
+   .item-get__body {
+      width: 650%;
+   }
+}
+@media (max-width: 61.9988rem) {
+   .get {
+      padding-top: 6.25rem;
+      padding-bottom: 9.375rem;
+   }
+   .item-get__text {
+      font-size: 3.4375rem;
+   }
+   .item-get__arrow {
+      flex: 0 0 2.8125rem;
+      height: 2.8125rem;
+   }
+   .item-get {
+      height: 4.5625rem;
+   }
+   .item-get__body {
+      width: 800%;
+   }
+}
+@media (max-width: 47.9988rem) {
+   .get {
+      padding-top: 5.625rem;
+      padding-bottom: 8.75rem;
+   }
+   .item-get__text {
+      font-size: 3.125rem;
+   }
+   .item-get__arrow {
+      flex: 0 0 2.6875rem;
+      height: 2.6875rem;
+   }
+   .item-get {
+      height: 4.375rem;
+   }
+   .item-get__body {
+      width: 1100%;
+   }
+}
+@media (max-width: 29.9988rem) {
+   .get {
+      padding-top: 5.625rem;
+      padding-bottom: 7.8125rem;
+   }
+   .item-get__text {
+      font-size: 2.5rem;
+   }
+   .item-get__arrow {
+      flex: 0 0 2.1875rem;
+      height: 2.1875rem;
+   }
+   .item-get {
+      height: 3.75rem;
+   }
+   .item-get__body {
+      width: 1400%;
+   }
+}
