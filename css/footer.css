@@ -48,6 +48,9 @@
    .footer__logo img {
       max-width: 6.25rem;
    }
+   .footer__list {
+      column-gap: 2.8125rem;
+   }
 }
 @media (max-width: 47.9375rem) {
    .footer {
